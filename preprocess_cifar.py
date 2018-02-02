@@ -38,7 +38,7 @@ import argparse, sys, time
 def options():
     parser = argparse.ArgumentParser()
     parser.add_argument('infiles',  default=None, nargs='+',
-            help='Input text files of APA references.')
+            help='Input files.')
     parser.add_argument('-v', '--verbose',  default=False,  action='store_true',
             help="Some toggle option.")
 #    parser.add_argument('-i', '--input',  default=None,
