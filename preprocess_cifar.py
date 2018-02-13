@@ -87,6 +87,38 @@ def main():
         stuff['labels'] = y_test
         pickle.dump(stuff, open("cifar-100-test.p", "wb"))
 
+    elif _type == 'cifar100_coarse':
+        from keras.datasets import cifar100
+        (x_train, y_train), (x_test, y_test) = cifar100.load_data(label_mode='coarse')
+        print(x_train.shape) # (50000, 32, 32, 3)
+        print(x_test.shape)  # (10000, 32, 32, 3)
+        print(y_train) 
+        stuff = dict()
+        stuff['data'] = x_train
+        stuff['labels'] = y_train
+        pickle.dump(stuff, open("cifar-100-coarse-train.p", "wb"))
+        del stuff
+        stuff = dict()
+        stuff['data'] = x_test
+        stuff['labels'] = y_test
+        pickle.dump(stuff, open("cifar-100--coarse-test.p", "wb"))
+
+    elif _type == 'mnist':
+        from keras.datasets import mnist
+        (x_train, y_train), (x_test, y_test) = mnist.load_data()
+        print(x_train.shape) # (50000, 32, 32, 3)
+        print(x_test.shape)  # (10000, 32, 32, 3)
+        print(y_train) 
+        stuff = dict()
+        stuff['data'] = x_train
+        stuff['labels'] = y_train
+        pickle.dump(stuff, open("mnist-train.p", "wb"))
+        del stuff
+        stuff = dict()
+        stuff['data'] = x_test
+        stuff['labels'] = y_test
+        pickle.dump(stuff, open("mnist-test.p", "wb"))
+
     elif _type == 'cifar10_local':
         ## official cifar-10
         assert len(ops.infiles) == 1
