@@ -30,4 +30,12 @@ See also
 -   <https://github.com/JMHOO/planet-insight>
 
 
+Mess
+----------------------------------
+
+-   <https://spin.atomicobject.com/2014/06/24/gradient-descent-linear-regression/>
+-   <https://github.com/bdhammel/ml-cliff-notes>
+-   <https://github.com/sravya8/ML>
+
+
 
